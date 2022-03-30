@@ -1,0 +1,155 @@
+:root {
+    --color-primary: hsl(25, 97%, 53%);
+    --color-warn: hsl(0, 90%, 60%);
+    --color-white: hsl(0, 0%, 100%);                /* header */
+    --color-light-grey: hsl(217, 12%, 63%);         /*  */
+    --color-medium-grey: hsl(216, 12%, 54%);        /*  */
+    --color-medium-dark-blue: hsl(214, 15%, 23%);   /* button, icon container, score */
+    --color-dark-blue: hsl(213, 19%, 18%);          /* modal */
+    --color-very-dark-blue: hsl(216, 12%, 8%);      /* body */
+
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+
+    --font-size: 15px;
+
+    --font-family-main: 'Overpass';
+    --font-weight-1: 400;
+    --font-weight-2: 700;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: var(--color-very-dark-blue);
+    height: calc(100% - 30px);
+    width: 100%;
+    font-family: var(--font-family-main), sans-serif;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-1);
+}
+
+.full-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-div {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--color-medium-dark-blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.modal {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 320px;
+    height: fit-content;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--color-dark-blue);
+    border-radius: 22px;
+}
+
+#thankyou-modal {
+    display: none;
+    align-items: center;
+    text-align: center;
+}
+
+.score {
+    color: var(--color-primary);
+    background-color: var(--color-medium-dark-blue);
+    width: 65%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.header {
+    color: var(--color-white);
+    margin: 0;
+    padding: 0;
+    font-weight: var(--font-weight-2);
+}
+
+.content p {
+    color: var(--color-medium-grey);
+    margin: 0;
+    padding: 0;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions button {
+    border: none;
+    color: var(--color-light-grey);
+}
+
+.actions button:hover {
+    color: var(--color-white);
+    background-color: var(--color-light-grey);
+}
+
+.actions button:focus {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.submit-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.submit {
+    border: none;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 45px;
+    border-radius: 22px;
+}
+
+.submit:hover {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+}
+
+.error {
+    display: none;
+    color: var(--color-warn);
+    margin: 0;
+    padding: 0;
+}
